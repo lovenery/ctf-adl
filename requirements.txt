@@ -13,10 +13,12 @@ Mako==1.0.7
 MarkupSafe==1.0
 packaging==16.8
 paramiko==2.4.0
+pkg-resources==0.0.0
 pluggy==0.5.2
 psutil==5.4.1
 pwn==1.0
 pwntools==3.10.0
+py==1.5.2
 pyasn1==0.3.7
 pycparser==2.18
 pyelftools==0.24
@@ -31,6 +33,7 @@ requests==2.18.4
 ROPGadget==5.4
 six==1.11.0
 sortedcontainers==1.5.7
+termcolor==1.1.0
 tox==2.9.1
 unicorn==1.0.1
 urllib3==1.22
