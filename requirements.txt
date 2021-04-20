@@ -18,7 +18,7 @@ pluggy==0.5.2
 psutil==5.4.1
 pwn==1.0
 pwntools==3.10.0
-py==1.5.2
+py==1.10.0
 pyasn1==0.3.7
 pycparser==2.18
 pyelftools==0.24
