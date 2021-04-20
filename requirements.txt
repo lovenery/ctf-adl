@@ -17,7 +17,7 @@ pkg-resources==0.0.0
 pluggy==0.5.2
 psutil==5.4.1
 pwn==1.0
-pwntools==3.10.0
+pwntools==4.3.1
 py==1.5.2
 pyasn1==0.3.7
 pycparser==2.18
