@@ -36,5 +36,5 @@ sortedcontainers==1.5.7
 termcolor==1.1.0
 tox==2.9.1
 unicorn==1.0.1
-urllib3==1.22
+urllib3==1.26.5
 virtualenv==15.1.0
